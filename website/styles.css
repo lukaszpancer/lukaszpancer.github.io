@@ -1,0 +1,137 @@
+@property --myColor1 {
+    syntax: '<color>';
+    initial-value: #fffbfb10;
+    inherits: false;
+}
+
+@property --myColor2 {
+    syntax: '<color>';
+    initial-value: #fffdfd20;
+    inherits: false;
+}
+
+@property --myColor3 {
+    syntax: '<color>';
+    initial-value: #6C9BCF80;
+    inherits: false;
+}
+
+@property --myColor4 {
+    syntax: '<color>';
+    initial-value: #A5C0DD80;
+    inherits: false;
+}
+
+@keyframes elevate {
+    from {
+        transform: translateY(0%);
+    }
+
+    to {
+        transform: translateY(5%);
+
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1.0);
+    }
+
+    to {
+        transform: scale(1.2);
+
+    }
+}
+
+body {
+    background-image: linear-gradient(-0.05turn, #a931ff 35%, #0f0070 99%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.gradient-1 {
+    background-image: linear-gradient(0.4turn, var(--myColor1) 0%, var(--myColor2) 100%);
+}
+
+.gradient-2 {
+    background-image: linear-gradient(0.4turn, var(--myColor3) 0%, var(--myColor4) 100%);
+
+}
+
+.jumbo {
+
+    padding: 1.5rem;
+    margin: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: auto;
+    border-radius: 1rem;
+    transition: margin 0.5s ease-in-out, --myColor1 1s ease-in, --myColor2 1s ease-in-out, --myColor3 1s ease-in, --myColor4 1s ease-in-out
+}
+
+@media screen and (min-width: 1001px) {
+    #app {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .first-row {
+        margin-top: 5vh;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .img-container {
+        margin-left: 0vw;
+    }
+
+    .jumbo-text {
+        margin: 0px;
+    }
+
+    #app {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+.jumbo-container {
+    padding: 2rem;
+}
+
+.jumbo svg {
+    animation: grow 2s ease-out infinite alternate;
+    animation-delay: 0.6s;
+}
+
+.jumbo:hover {
+
+
+    margin-bottom: 4rem;
+    margin-top: 0rem;
+    --myColor1: hsla(159, 26%, 61%, 0.676);
+    --myColor2: #39eeee7c;
+    --myColor3: hsla(159, 26%, 61%, 0.676);
+    --myColor4: #39eeee7c;
+    animation: elevate 1s ease-out infinite alternate;
+    animation-delay: 0.6s;
+    /* resume the animation */
+}
+
+.icon {
+    transition: transform 0.25s ease-in-out, filter 0.25s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.3);
+    filter: drop-shadow(10px 10px 5px #222);
+}

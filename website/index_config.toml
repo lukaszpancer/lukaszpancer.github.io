@@ -1,0 +1,5 @@
+packages = ["pandas", "plotly", "scikit-learn"]
+[[fetch]]
+files = ['__init__.py', 'datasets.py', 'plots.py']
+from = 'clustering'
+to_folder = 'clustering'
