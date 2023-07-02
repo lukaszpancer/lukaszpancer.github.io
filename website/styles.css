@@ -73,6 +73,15 @@ body {
     transition: margin 0.5s ease-in-out, --myColor1 1s ease-in, --myColor2 1s ease-in-out, --myColor3 1s ease-in, --myColor4 1s ease-in-out
 }
 
+.about-me {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background-image: linear-gradient(0.4turn, var(--myColor3) 0%, var(--myColor4) 100%);
+    justify-content: start;
+    align-items: start;
+
+}
+
 @media screen and (min-width: 1001px) {
     #app {
         flex-grow: 1;

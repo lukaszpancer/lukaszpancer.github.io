@@ -2,6 +2,8 @@
 const paths = {
     "#home": "website/home.html",
     "#snake": "website/snake.html",
+    "#cannibals": "website/cannibals.html",
+    "#chess": "website/chess.html",
     "#navbar": "website/navbar.html",
 }
 const render = (path, id) => {
