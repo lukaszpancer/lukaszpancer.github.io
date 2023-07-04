@@ -1,4 +1,21 @@
 
+function setInnerHTML(elm, html) {
+    elm.innerHTML = html;
+
+    Array.from(elm.querySelectorAll("script"))
+        .forEach(oldScriptEl => {
+            const newScriptEl = document.createElement("script");
+
+            Array.from(oldScriptEl.attributes).forEach(attr => {
+                newScriptEl.setAttribute(attr.name, attr.value)
+            });
+
+            const scriptText = document.createTextNode(oldScriptEl.innerHTML);
+            newScriptEl.appendChild(scriptText);
+
+            oldScriptEl.parentNode.replaceChild(newScriptEl, oldScriptEl);
+        });
+}
 const paths = {
     "#home": "website/home.html",
     "#snake": "website/snake.html",
@@ -12,7 +29,8 @@ const render = (path, id) => {
         fetch(path)
             .then(response => response.text())
             .then(text => {
-                document.querySelector(id).innerHTML = text;
+                setInnerHTML(document.querySelector(id), text);
+                // document.querySelector(id).innerHTML = text;
             }).then(() => {
                 var tiltElements = document.querySelectorAll('[data-tilt]');
                 console.log(tiltElements);

@@ -44,6 +44,34 @@
     }
 }
 
+@keyframes appear {
+    from {
+        -webkit-transform: translateX(-1600px);
+        transform: translateX(-1600px);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translateZ(-80px);
+        transform: translateZ(-80px);
+    }
+}
+
 body {
     background-image: linear-gradient(-0.05turn, #a931ff 35%, #0f0070 99%);
     background-repeat: no-repeat;
@@ -82,12 +110,33 @@ body {
 
 }
 
+.pygame-frame {
+    opacity: 0;
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    animation: appear 1s ease-out forwards;
+    animation-delay: 2s;
+
+}
+
+.loading-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    animation: disappear 1s ease-out forwards;
+    animation-delay: 2s;
+
+}
+
 @media screen and (min-width: 1001px) {
     #app {
         flex-grow: 1;
         display: flex;
         flex-direction: column;
         gap: 12px;
+
     }
 
     .first-row {
