@@ -21,6 +21,7 @@ const paths = {
     "#snake": "website/snake.html",
     "#cannibals": "website/cannibals.html",
     "#chess": "website/chess.html",
+    "#ai_chat": "website/ai_chat.html",
     "#navbar": "website/navbar.html",
 }
 const render = (path, id) => {
