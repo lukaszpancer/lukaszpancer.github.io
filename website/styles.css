@@ -102,11 +102,15 @@ body {
 }
 
 .about-me {
-    border-radius: 1rem;
     padding: 1.5rem;
-    background-image: linear-gradient(0.4turn, var(--myColor3) 0%, var(--myColor4) 100%);
-    justify-content: start;
-    align-items: start;
+    margin: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: auto;
+    border-radius: 1rem;
+
 
 }
 
@@ -143,6 +147,14 @@ body {
         margin-top: 5vh;
     }
 
+    .story {
+        max-width: 85%;
+    }
+
+    .list {
+        margin-left: 5vh;
+    }
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -158,6 +170,10 @@ body {
         flex-grow: 1;
         display: flex;
         flex-direction: column;
+    }
+
+    .blabla {
+        display: none;
     }
 
 }
