@@ -192,7 +192,7 @@ body {
 .par {
     padding-left: 5rem;
     padding-right: 5rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 1000px) {
