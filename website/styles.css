@@ -157,27 +157,6 @@ body {
 
 }
 
-@media screen and (max-width: 1000px) {
-    .img-container {
-        margin-left: 0vw;
-    }
-
-    .jumbo-text {
-        margin: 0px;
-    }
-
-    #app {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .blabla {
-        display: none;
-    }
-
-}
-
 .jumbo-container {
     padding: 2rem;
 }
@@ -208,4 +187,94 @@ body {
 .icon:hover {
     transform: scale(1.3);
     filter: drop-shadow(10px 10px 5px #222);
+}
+
+.par {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .img-container {
+        margin-left: 0vw;
+    }
+
+    .jumbo-text {
+        margin: 0px;
+    }
+
+    #app {
+        gap: 0px
+    }
+
+    .blabla {
+        display: none;
+    }
+
+    .jumbo {
+        padding: 1.5rem;
+        margin: 2rem;
+    }
+
+    .about-me {
+        padding: 1.5rem;
+        margin: 2rem;
+    }
+
+    .par {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .list {
+        margin-left: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .jumbo-container {
+        padding: 0.35rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .jumbo {
+        padding: 0.25rem;
+        margin: 0.25rem;
+    }
+
+    .about-me {
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+
+    .container-fluid {
+        padding: 0px;
+    }
+
+    .row {
+        margin: 0vh;
+    }
+
+    #arrow {
+        display: none;
+
+    }
+
+    .jumbo-text {
+        font-size: 0.5rem;
+    }
+
+    .par {
+        font-size: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .list {
+        margin-left: 1rem;
+    }
 }
