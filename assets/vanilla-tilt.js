@@ -111,9 +111,9 @@ var VanillaTilt = (function () {
                 window.addEventListener("resize", this.onWindowResizeBind);
             }
 
-            if (this.gyroscope) {
-                window.addEventListener("deviceorientation", this.onDeviceOrientationBind);
-            }
+            // if (this.gyroscope) {
+            //     window.addEventListener("deviceorientation", this.onDeviceOrientationBind);
+            // }
         }
 
         /**
