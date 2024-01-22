@@ -81,10 +81,14 @@ body {
 
 .gradient-1 {
     background-image: linear-gradient(0.4turn, var(--myColor1) 0%, var(--myColor2) 100%);
+    background-image: -webkit-linear-gradient(0.4turn, #fffbfb10 0%, #fffdfd20 100%);
+    background-image: -moz-linear-gradient(0.4turn, #fffbfb10 0%, #fffdfd20 100%);
 }
 
 .gradient-2 {
     background-image: linear-gradient(0.4turn, var(--myColor3) 0%, var(--myColor4) 100%);
+    background-image: -webkit-linear-gradient(0.4turn, #6C9BCF80 0%, #A5C0DD80 100%);
+    background-image: -moz-linear-gradient(0.4turn, #6C9BCF80 0%, #A5C0DD80 100%);
 
 }
 
