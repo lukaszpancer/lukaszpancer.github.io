@@ -12,13 +12,13 @@
 
 @property --myColor3 {
     syntax: '<color>';
-    initial-value: #6C9BCF80;
+    initial-value: #434a5280;
     inherits: false;
 }
 
 @property --myColor4 {
     syntax: '<color>';
-    initial-value: #A5C0DD80;
+    initial-value: #c5cdd680;
     inherits: false;
 }
 
@@ -73,11 +73,13 @@
 }
 
 body {
-    background-image: linear-gradient(-0.05turn, #5b22a0 35%, #0f0070 99%);
+    background-image: linear-gradient(-0.05turn, #333234 35%, #18181a 99%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden;
 }
+
+
 
 .gradient-1 {
     background-image: linear-gradient(0.4turn, var(--myColor1) 0%, var(--myColor2) 100%);
@@ -87,8 +89,8 @@ body {
 
 .gradient-2 {
     background-image: linear-gradient(0.4turn, var(--myColor3) 0%, var(--myColor4) 100%);
-    background-image: -webkit-linear-gradient(0.4turn, #6C9BCF80 0%, #A5C0DD80 100%);
-    background-image: -moz-linear-gradient(0.4turn, #6C9BCF80 0%, #A5C0DD80 100%);
+    background-image: -webkit-linear-gradient(0.4turn, #b0bfd080 0%, #c5d0dd80 100%);
+    background-image: -moz-linear-gradient(0.4turn, #aabcd080 0%, #b7c2ce80 100%);
 
 }
 
@@ -138,7 +140,40 @@ body {
 
 }
 
-@media screen and (min-width: 1001px) {
+.last-row {
+    margin-bottom: 5vh;
+}
+
+@media screen and (min-width: 1301px) {
+    #app {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+    }
+
+    .outer {
+        padding-left: calc((100% - 1301px)/3);
+        padding-right: calc((100% - 1301px)/3);
+    }
+
+    .first-row {
+        margin-top: 5vh;
+    }
+
+    .story {
+        max-width: 85%;
+    }
+
+    .list {
+        margin-left: 5vh;
+    }
+
+
+}
+
+@media screen and (max-width: 1301px) {
     #app {
         flex-grow: 1;
         display: flex;
@@ -158,6 +193,7 @@ body {
     .list {
         margin-left: 5vh;
     }
+
 
 }
 
